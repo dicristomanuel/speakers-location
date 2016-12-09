@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					C084D6501DFB5BA9005016EB = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q9L6K82MD5;
 						ProvisioningStyle = Automatic;
 					};
 					C084D6691DFB5BA9005016EB = {
@@ -422,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q9L6K82MD5;
 				INFOPLIST_FILE = AccessoryTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dicristo.AccessoryTest;
@@ -433,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q9L6K82MD5;
 				INFOPLIST_FILE = AccessoryTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dicristo.AccessoryTest;
