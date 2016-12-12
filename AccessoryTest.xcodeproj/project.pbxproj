@@ -15,6 +15,7 @@
 		C084D6641DFB5BA9005016EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C084D6621DFB5BA9005016EB /* LaunchScreen.storyboard */; };
 		C084D66F1DFB5BA9005016EB /* AccessoryTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C084D66E1DFB5BA9005016EB /* AccessoryTestTests.m */; };
 		C084D67A1DFB5BA9005016EB /* AccessoryTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C084D6791DFB5BA9005016EB /* AccessoryTestUITests.m */; };
+		C084D6891DFB8DAF005016EB /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C084D6881DFB8DAF005016EB /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C084D6751DFB5BA9005016EB /* AccessoryTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccessoryTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C084D6791DFB5BA9005016EB /* AccessoryTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccessoryTestUITests.m; sourceTree = "<group>"; };
 		C084D67B1DFB5BA9005016EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C084D6881DFB8DAF005016EB /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		C084D68A1DFC6C97005016EB /* AccessoryTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccessoryTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C084D6891DFB8DAF005016EB /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				C084D66D1DFB5BA9005016EB /* AccessoryTestTests */,
 				C084D6781DFB5BA9005016EB /* AccessoryTestUITests */,
 				C084D6521DFB5BA9005016EB /* Products */,
+				C084D6871DFB8DAE005016EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,7 @@
 		C084D6531DFB5BA9005016EB /* AccessoryTest */ = {
 			isa = PBXGroup;
 			children = (
+				C084D68A1DFC6C97005016EB /* AccessoryTest.entitlements */,
 				C084D6571DFB5BA9005016EB /* AppDelegate.h */,
 				C084D6581DFB5BA9005016EB /* AppDelegate.m */,
 				C084D65A1DFB5BA9005016EB /* ViewController.h */,
@@ -138,6 +144,14 @@
 				C084D67B1DFB5BA9005016EB /* Info.plist */,
 			);
 			path = AccessoryTestUITests;
+			sourceTree = "<group>";
+		};
+		C084D6871DFB8DAE005016EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C084D6881DFB8DAF005016EB /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +223,20 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Q9L6K82MD5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					C084D6691DFB5BA9005016EB = {
 						CreatedOnToolsVersion = 8.1;
@@ -423,8 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AccessoryTest/AccessoryTest.entitlements;
 				DEVELOPMENT_TEAM = Q9L6K82MD5;
 				INFOPLIST_FILE = AccessoryTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dicristo.AccessoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,8 +465,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AccessoryTest/AccessoryTest.entitlements;
 				DEVELOPMENT_TEAM = Q9L6K82MD5;
 				INFOPLIST_FILE = AccessoryTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dicristo.AccessoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

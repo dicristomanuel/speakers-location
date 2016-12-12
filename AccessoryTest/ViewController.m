@@ -14,8 +14,21 @@
 
 @implementation ViewController
 
+
+- (void)getAttachedDevices;
+{
+    EAAccessoryManager* accessoryManager = [EAAccessoryManager sharedAccessoryManager];
+    
+    [accessoryManager showBluetoothAccessoryPickerWithNameFilter:nil
+                                                      completion:nil];
+
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getAttachedDevices];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
